@@ -14,7 +14,7 @@ const Hero = () => {
               published every mont.
             </p>
 
-            <button className="py-2 px-5 text-sm bg-secondary text-white capitalize rounded">
+            <button className="py-2 px-5 text-sm bg-secondary text-white capitalize rounded-tl-xl rounded-br-xl shadow-xl">
               get started
             </button>
           </div>
@@ -22,7 +22,7 @@ const Hero = () => {
             <img
               src="https://images.unsplash.com/photo-1519205196298-7fc29cb73b3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
               alt="learner"
-              className="rounded  shadow-xl "
+              className="rounded-tl-[10rem] rounded-br-[10rem] p-5 bg-white "
             />
           </div>
         </div>

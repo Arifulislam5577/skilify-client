@@ -13,7 +13,7 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <ul className="flex items-center justify-between gap-10 capitalize text-sm font-semibold text-gray-500">
+        <ul className="flex items-center justify-between gap-10 capitalize text-sm  text-gray-500">
           <li>
             <NavLink to="/courses">courses</NavLink>
           </li>
@@ -29,7 +29,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/login"
-              className="py-2 px-5 bg-secondary text-white rounded shadow"
+              className="py-2 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow"
             >
               Login
             </Link>
