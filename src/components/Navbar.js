@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Button from "./Button";
+import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <header className="bg-primary py-5">
       <div className="container flex items-center justify-between">
@@ -24,14 +27,17 @@ const Navbar = () => {
             <NavLink to="/blog">blog</NavLink>
           </li>
           <li>
-            <button>Mode</button>
+            <button onClick={() => setDarkMode(!darkMode)}>
+              {darkMode ? (
+                <MdLightMode size="18" />
+              ) : (
+                <MdOutlineLightMode size="18" />
+              )}
+            </button>
           </li>
           <li>
-            <Link
-              to="/login"
-              className="py-2 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow"
-            >
-              Login
+            <Link to="/login">
+              <Button>Login</Button>
             </Link>
           </li>
         </ul>

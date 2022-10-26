@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Hero = () => {
   return (
@@ -14,9 +15,7 @@ const Hero = () => {
               published every mont.
             </p>
 
-            <button className="py-2 px-5 text-sm bg-secondary text-white capitalize rounded-tl-xl rounded-br-xl shadow-xl">
-              get started
-            </button>
+            <Button>get started</Button>
           </div>
           <div className="p-5">
             <img
