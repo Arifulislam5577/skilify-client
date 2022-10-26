@@ -8,11 +8,15 @@ import {
   updateProfile,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config.js";
+import useFetch from "../hooks/useFetch.js";
 export const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(true);
+  const { error, loading, data } = useFetch(
+    "http://localhost:5000/api/v1/course"
+  );
 
   // AUTH CONTROLLERS
 
@@ -42,7 +46,7 @@ const DataProvider = ({ children }) => {
   // COURSE CONTROLLERS
 
   const authentication = { createUser, updateUser, LogOut, googleSignIn };
-  const courses = {};
+  const courses = { loading, error, data };
 
   useEffect(() => {
     const subscribe = onAuthStateChanged(auth, (user) => {
