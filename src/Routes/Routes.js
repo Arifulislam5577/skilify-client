@@ -8,6 +8,7 @@ import Blog from "../pages/Blog";
 import Courses from "../pages/Courses";
 import CourseDatails from "../pages/CourseDatails";
 import axios from "axios";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -17,7 +18,10 @@ const Router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      { path: "/courses", element: <Courses /> },
+      {
+        path: "/courses",
+        element: <Courses />,
+      },
       { path: "/blog", element: <Blog /> },
       {
         path: "/Course/:id",

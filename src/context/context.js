@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
@@ -26,6 +27,12 @@ const DataProvider = ({ children }) => {
     return await createUserWithEmailAndPassword(auth, email, password);
   };
 
+  //------Login with email and password
+  const loginWithEmailAndPassword = async (email, password) => {
+    setLoader(true);
+    return await signInWithEmailAndPassword(auth, email, password);
+  };
+
   //------Update User FullName and Photo
   const updateUser = async (displayName, photoURL) => {
     return await updateProfile(auth.currentUser, { displayName, photoURL });
@@ -45,7 +52,13 @@ const DataProvider = ({ children }) => {
 
   // COURSE CONTROLLERS
 
-  const authentication = { createUser, updateUser, LogOut, googleSignIn };
+  const authentication = {
+    createUser,
+    updateUser,
+    LogOut,
+    googleSignIn,
+    loginWithEmailAndPassword,
+  };
   const courses = { loading, error, data };
 
   useEffect(() => {

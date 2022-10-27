@@ -56,7 +56,12 @@ const CourseDatails = () => {
             </p>
           ))}
 
-          <Link>Get premium access</Link>
+          <Link
+            to="/checkout"
+            className="py-2 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow hover:translate-y-1 duration-300 transition-all capitalize text-sm my-5 inline-block"
+          >
+            Get premium access
+          </Link>
         </div>
       </div>
     </section>

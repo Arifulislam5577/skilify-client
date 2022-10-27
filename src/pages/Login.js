@@ -1,8 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { DataContext } from "../context/context";
 import useRedirect from "../hooks/useRedirect";
 
 const Login = () => {
+  const { user, loginWithEmailAndPassword, googleSignIn } =
+    useContext(DataContext);
+  const navigate = useNavigate();
   const redirect = useRedirect();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,14 +21,19 @@ const Login = () => {
       setError("Password must be at least 6 characters");
     } else {
       setLoading(true);
-      const user = { email, password };
-      console.log(user);
+      await loginWithEmailAndPassword(email, password);
       setError("");
       setEmail("");
       setPassword("");
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, user]);
 
   return (
     <section className="py-10 bg-light">
@@ -93,7 +102,10 @@ const Login = () => {
             <div className="col-span-4 text-center font-bold text-xs text-gray-500">
               OR
             </div>
-            <div className="py-2.5 text-center cursor-pointer w-full bg-white text-gray-900 capitalize text-sm rounded col-span-2">
+            <div
+              onClick={googleSignIn}
+              className="py-2.5 text-center cursor-pointer w-full bg-white text-gray-900 capitalize text-sm rounded col-span-2"
+            >
               Google
             </div>
             <div className="py-2.5 text-center cursor-pointer w-full bg-gray-900 text-white capitalize text-sm rounded col-span-2">

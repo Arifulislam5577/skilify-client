@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { FaBars } from "react-icons/fa";
 import Button from "./Button";
 import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
+import { DataContext } from "../context/context";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -12,6 +13,10 @@ const Navbar = () => {
   const handleShowMenu = () => {
     setshowMobileMenu((prev) => !prev);
   };
+
+  const { user, LogOut } = useContext(DataContext);
+
+  console.log(user);
 
   return (
     <header className="bg-primary py-5">
@@ -47,11 +52,32 @@ const Navbar = () => {
               )}
             </button>
           </li>
-          <li>
-            <Link to="/login">
-              <Button>Login</Button>
-            </Link>
-          </li>
+          {user ? (
+            <>
+              <li className="">
+                <img
+                  src={user?.photoURL}
+                  className="h-10 p-1 bg-white cursor-pointer w-10 rounded-full"
+                  alt={user?.displayName}
+                  title={user?.displayName}
+                />
+              </li>
+              <li>
+                <button
+                  onClick={LogOut}
+                  className="py-2 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow hover:translate-y-1 duration-300 transition-all capitalize text-sm"
+                >
+                  Logout
+                </button>
+              </li>
+            </>
+          ) : (
+            <li>
+              <Link to="/login">
+                <Button>Login</Button>
+              </Link>
+            </li>
+          )}
         </ul>
         <button
           onClick={handleShowMenu}
@@ -88,11 +114,27 @@ const Navbar = () => {
                     )}
                   </button>
                 </li>
-                <li>
-                  <Link to="/login">
-                    <Button>Login</Button>
-                  </Link>
-                </li>
+                {user ? (
+                  <>
+                    <li className="">
+                      <img
+                        src={user?.photoURL}
+                        className="h-10 p-1 bg-white cursor-pointer w-10 rounded-full"
+                        alt={user?.displayName}
+                        title={user?.displayName}
+                      />
+                    </li>
+                    <li>
+                      <button>Logout</button>
+                    </li>
+                  </>
+                ) : (
+                  <li>
+                    <Link to="/login">
+                      <Button>Login</Button>
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

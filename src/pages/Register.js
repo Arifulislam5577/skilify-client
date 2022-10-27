@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { DataContext } from "../context/context";
 import useRedirect from "../hooks/useRedirect";
 
 const Register = () => {
+  const { createUser, updateUser, user, googleSignIn } =
+    useContext(DataContext);
   const redirect = useRedirect();
+  const navigate = useNavigate();
   const [fullName, setFullName] = useState("");
   const [photoUrl, setPhotoUrl] = useState("");
   const [email, setEmail] = useState("");
@@ -21,8 +25,8 @@ const Register = () => {
       setError("FullName must be at least 5 characters");
     } else {
       setLoading(true);
-      const user = { fullName, photoUrl, email, password };
-      console.log(user);
+      await createUser(email, password);
+      await updateUser(fullName, photoUrl);
       setFullName("");
       setPhotoUrl("");
       setError("");
@@ -31,6 +35,12 @@ const Register = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, user]);
   return (
     <section className="py-10 bg-light">
       <div className="container">
@@ -126,7 +136,10 @@ const Register = () => {
             <div className="col-span-4 text-center font-bold text-xs text-gray-500">
               OR
             </div>
-            <div className="py-2.5 text-center cursor-pointer w-full bg-white text-gray-900 capitalize text-sm rounded col-span-2">
+            <div
+              onClick={googleSignIn}
+              className="py-2.5 text-center cursor-pointer w-full bg-white text-gray-900 capitalize text-sm rounded col-span-2"
+            >
               Google
             </div>
             <div className="py-2.5 text-center cursor-pointer w-full bg-gray-900 text-white capitalize text-sm rounded col-span-2">
