@@ -29,20 +29,22 @@ const Blog = () => {
     },
   ];
   return (
-    <section className="blog py-10 bg-light">
+    <section className="blog py-10">
       <div className="container">
         <h1 className="text-center text-3xl font-bold capitalize text-gray-600">
           our blog
         </h1>
 
-        <div className="mt-5">
+        <div className="mt-5 w-full lg:w-2/3 mx-auto">
           {blogs.map((blog) => (
-            <div key={blog.id} className="blog-content bg-white p-5 mb-5">
-              <h2 className="text-xl font-bold text-gray-700 mb-2">
+            <article className="mb-4" key={blog.id}>
+              <h2 className="p-2 border-l-2 border-l-secondary bg-primary font-semibold text-gray-600 mb-2">
                 {blog.title}
               </h2>
-              <p className="text-gray-500 text-base">{blog.answer}</p>
-            </div>
+              <p className="text-sm text-gray-500 text-justify">
+                {blog.answer}
+              </p>
+            </article>
           ))}
         </div>
       </div>

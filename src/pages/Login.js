@@ -5,7 +5,7 @@ import useRedirect from "../hooks/useRedirect";
 import { HandleError } from "../utils/HandleError";
 
 const Login = () => {
-  const { user, loginWithEmailAndPassword, googleSignIn } =
+  const { user, loginWithEmailAndPassword, googleSignIn, githubSignIn } =
     useContext(DataContext);
   const navigate = useNavigate();
   const redirect = useRedirect();
@@ -115,7 +115,10 @@ const Login = () => {
             >
               Google
             </div>
-            <div className="py-2.5 text-center cursor-pointer w-full bg-gray-900 text-white capitalize text-sm rounded col-span-2">
+            <div
+              onClick={githubSignIn}
+              className="py-2.5 text-center cursor-pointer w-full bg-gray-900 text-white capitalize text-sm rounded col-span-2"
+            >
               Github
             </div>
           </div>
