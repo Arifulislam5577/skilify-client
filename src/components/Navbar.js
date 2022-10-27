@@ -16,7 +16,7 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <ul className="flex items-center justify-between gap-10 capitalize text-sm  text-gray-500">
+        <ul className="lg:flex items-center justify-between gap-10 capitalize text-sm  text-gray-500 hidden">
           <li>
             <NavLink to="/courses">courses</NavLink>
           </li>
