@@ -17,7 +17,7 @@ const DataProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [loader, setLoader] = useState(true);
   const { error, loading, data } = useFetch(
-    "http://localhost:5000/api/v1/course"
+    "https://skiliky-server.vercel.app/api/v1/course"
   );
 
   // AUTH CONTROLLERS

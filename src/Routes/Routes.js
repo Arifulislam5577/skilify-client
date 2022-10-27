@@ -30,7 +30,7 @@ const Router = createBrowserRouter([
         path: "/Course/:id",
         element: <CourseDatails />,
         loader: async ({ params }) =>
-          axios(`http://localhost:5000/api/v1/course/${params.id}`),
+          axios(`https://skiliky-server.vercel.app/api/v1/course/${params.id}`),
       },
       {
         path: "/checkout/:id",
@@ -40,7 +40,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) =>
-          axios(`http://localhost:5000/api/v1/course/${params.id}`),
+          axios(`https://skiliky-server.vercel.app/api/v1/course/${params.id}`),
       },
       { path: "*", element: <NotFound /> },
     ],
