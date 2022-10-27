@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import Pdf from "react-to-pdf";
 const CourseDatails = () => {
   const { data } = useLoaderData();
   const {
@@ -17,8 +18,11 @@ const CourseDatails = () => {
   const handleClick = () => {
     navigate(`/login?redirect=/checkout/${id}`);
   };
+
+  const ref = useRef();
+
   return (
-    <section>
+    <section ref={ref}>
       <div className="py-10 bg-light text-center">
         <h2 className="text-2xl tracking-wide font-bold text-gray-600 capitalize">
           {title}
@@ -45,9 +49,16 @@ const CourseDatails = () => {
             </span>
           </div>
           <div>
-            <button className="text-xs flex items-center gap-1 text-gray-500">
-              ⬇️Dawnload Content
-            </button>
+            <Pdf targetRef={ref} filename={`${title}.pdf`} scale={0.7}>
+              {({ toPdf }) => (
+                <button
+                  onClick={toPdf}
+                  className="text-xs flex items-center gap-1 text-gray-500"
+                >
+                  ⬇️Dawnload Content
+                </button>
+              )}
+            </Pdf>
           </div>
         </div>
       </div>

@@ -16,8 +16,6 @@ const Navbar = () => {
 
   const { user, LogOut } = useContext(DataContext);
 
-  console.log(user);
-
   return (
     <header className="bg-primary py-5">
       <div className="container flex items-center justify-between">

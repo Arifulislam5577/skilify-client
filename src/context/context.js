@@ -13,7 +13,7 @@ import useFetch from "../hooks/useFetch.js";
 export const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const [loader, setLoader] = useState(true);
   const { error, loading, data } = useFetch(
     "http://localhost:5000/api/v1/course"
