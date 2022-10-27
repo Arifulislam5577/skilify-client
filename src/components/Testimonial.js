@@ -27,7 +27,7 @@ const Testimonial = () => {
               <span className="inline-flex items-center">
                 <img
                   alt="testimonial"
-                  src="https://miro.medium.com/max/1252/0*Zw1ZfCk0svcXVQXg.jpg"
+                  src="images/avator.jpg"
                   className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border-2 border-white"
                 />
                 <span className="flex-grow flex flex-col pl-4">
@@ -58,7 +58,7 @@ const Testimonial = () => {
               <span className="inline-flex items-center">
                 <img
                   alt="testimonial"
-                  src="https://miro.medium.com/max/1252/0*Zw1ZfCk0svcXVQXg.jpg"
+                  src="images/avator2.jpg"
                   className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border-2 border-white"
                 />
                 <span className="flex-grow flex flex-col pl-4">
