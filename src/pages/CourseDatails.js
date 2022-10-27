@@ -64,7 +64,11 @@ const CourseDatails = () => {
       </div>
       <div className="container mt-5 lg:w-2/3 mx-auto w-full">
         <div className="p-5">
-          <img src={coverPhoto} alt={title} />
+          <img
+            src={coverPhoto}
+            alt={title}
+            className="h-full w-full rounded-xl"
+          />
           <h4 className="text-xl font-bold text-gray-600 mt-5">Description</h4>
 
           {description.map((detial, index) => (
