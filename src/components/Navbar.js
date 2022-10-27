@@ -68,7 +68,7 @@ const Navbar = () => {
               <button onClick={handleShowMenu} className="mb-10 text-gray-500">
                 <ImCross />
               </button>
-              <ul className="flex flex-col items-center justify-center gap-10 capitalize text-sm  text-gray-500">
+              <ul className="flex flex-col items-center justify-center gap-10 capitalize text-base  text-gray-500">
                 <li>
                   <NavLink to="/courses">courses</NavLink>
                 </li>
