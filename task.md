@@ -2,19 +2,19 @@
 
 You have to create a website to provide a quality learning platform in the domains of Computer Science/ Information Technology/Programming Languages/ Web technology/ anything else (anything related to education). For example, JavaScript tutorial. Please note that you will select one of the options mentioned above/ any one topic regarding education. You can't make a website with a JavaScript tutorial, as we have given an example on it.
 
-1. Make sure your design and website idea are unique. First, finalize your idea (What type of website do you want to build). Then google the site design or visit ThemeForest to get your website idea. However, your website can not relate to your previous assignments or any demo project displayed in the course or our conceptual sessions.
+1. Make sure your design and website idea are unique. First, finalize your idea (What type of website do you want to build). Then google the site design or visit ThemeForest to get your website idea. However, your website can not relate to your previous assignments or any demo project displayed in the course or our conceptual sessions. ✅✅
 
-1. Give your website a name. The name should appear on the website and be displayed on the website's title.
+1. Give your website a name. The name should appear on the website and be displayed on the website's title.✅✅
 
-1. It will contain a navbar with the options: website logo, website name, Courses, FAQ, Blog, toggle theme (dark/ light), and User Profile Picture (or login). The user profile picture on the navbar is conditional. If the user is signed in, the navbar will show the profile pic. The user's name will be visible when the mouse is in the picture.
+1. It will contain a navbar with the options: website logo, website name, Courses, FAQ, Blog, toggle theme (dark/ light), and User Profile Picture (or login). The user profile picture on the navbar is conditional. If the user is signed in, the navbar will show the profile pic. The user's name will be visible when the mouse is in the picture.🦀🦀
 
-1. After clicking "Log in," it will redirect to a login page. 3 types of login systems you have to implement: Email & password login, Google, and GitHub login. The login page will have a toggle option to go to the register page.
+1. After clicking "Log in," it will redirect to a login page. 3 types of login systems you have to implement: Email & password login, Google, and GitHub login. The login page will have a toggle option to go to the register page.🦀🦀
 
-1. In your Email and Password registration form, there should be an input box for "Full name," where the user will type their full name. Other fields will be Photo URL, Email, and Password.
+1. In your Email and Password registration form, there should be an input box for "Full name," where the user will type their full name. Other fields will be Photo URL, Email, and Password.✅✅
 
-1. Clicking "Courses" in the navbar (You can change this name to any meaningful name according to your design, but the purpose of this button should be the same according to our description) will redirect to a page that shows the courses. (Creating a fake dataset is necessary here). You have to create at least 6 courses (fake data). Design & course information is all up to you. (Load data from the server side - must). You can create one, two, or more courses in a row.
+1. Clicking "Courses" in the navbar (You can change this name to any meaningful name according to your design, but the purpose of this button should be the same according to our description) will redirect to a page that shows the courses. (Creating a fake dataset is necessary here). You have to create at least 6 courses (fake data). Design & course information is all up to you. (Load data from the server side - must). You can create one, two, or more courses in a row.✅✅
 
-1. The Courses page will be divided into two parts: a sidebar (either on the left side or on the right side according to your design) & content detail section. In the sidebar, there will be at least 6 options (course options or course categories, or anything else). Every option is clickable. (You will need to create necessary fake data)
+1. The Courses page will be divided into two parts: a sidebar (either on the left side or on the right side according to your design) & content detail section. In the sidebar, there will be at least 6 options (course options or course categories, or anything else). Every option is clickable. (You will need to create necessary fake data)✅✅
 
 1. When you click an option (course card or an option on the left/right sidebar), It will take you to the course detail page. Content details depend on you. But, it must include a header, introductory description/course body, and one image. All details must be relevant to the topic. You may include a bullet list/ table/ chart if needed.
 
@@ -30,13 +30,13 @@ You have to create a website to provide a quality learning platform in the domai
 
 ### Bonus:
 
-1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository.
+1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository.✅✅
 
-1. Make your website mobile & desktop responsive (tablet responsive is optional).
+1. Make your website mobile & desktop responsive (tablet responsive is optional).✅✅
 
 1. Display errors when the user's email address or password doesn't match.
 
-1. Clicking "Blog" will redirect to a public route. That route will have 4 questions & answers.
+1. Clicking "Blog" will redirect to a public route. That route will have 4 questions & answers.✅✅
 
    4.1 what is `cors`?
 
@@ -48,11 +48,11 @@ You have to create a website to provide a quality learning platform in the domai
 
 1. (client-side repo) Meaningful readme.md file containing your website name and link to your live site. And at least five bullet points mentioning your website's different features and functionality. And a list of technologies (frameworks, libraries) used in your project. (added a meaningful readme.md file for the server-side repo is optional)
 
-1. Create a 404 page.
+1. Create a 404 page.✅✅
 
-1. Make sure your site looks reasonable. The design and color selection is meaningful.
+1. Make sure your site looks reasonable. The design and color selection is meaningful.✅✅
 
-1. Clean and organized Code (folder structure). Organize components with meaningful names, and add comments when needed.
+1. Clean and organized Code (folder structure). Organize components with meaningful names, and add comments when needed.✅✅
 
 ### Optional (But Highly Recommended):
 

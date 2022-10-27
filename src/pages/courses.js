@@ -18,7 +18,10 @@ const Courses = () => {
             <div className="lg:col-span-1 w-full bg-light p-5 rounded">
               <ul>
                 {data?.map((item) => (
-                  <li className="text-sm text-gray-600 my-5 pl-3 hover:text-secondary hover:translate-x-1 transition-all duration-300">
+                  <li
+                    key={item.id}
+                    className="text-sm text-gray-600 my-5 pl-3 hover:text-secondary hover:translate-x-1 transition-all duration-300"
+                  >
                     <Link to={`/course/${item.id}`}>✅ {item.title}</Link>
                   </li>
                 ))}

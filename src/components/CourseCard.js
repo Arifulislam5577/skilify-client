@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const CourseCard = ({ course }) => {
   return (
     <div
-      className="card lg:col-span-1 w-full overflow-hidden rounded shadow hover:shadow-xl transition-all duration-300"
+      className="card lg:col-span-1 w-full overflow-hidden rounded shadow hover:shadow-xl transition-all duration-300 bg-white"
       key={course.id}
     >
       <div className="course-img">
         <Link to={`/course/${course.id}`}>
-          <img src="images/coverPhoto.jpg" alt="cover" />
+          <img src={course.coverPhoto} alt="cover" />
         </Link>
       </div>
       <div className="px-5 py-6 bg-white">
@@ -17,7 +17,7 @@ const CourseCard = ({ course }) => {
           <Link to={`/course/${course.id}`}>{course.title}</Link>
         </h2>
         <p className="title text-gray-400 text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+          {course.description[0].split(" ").slice(0, 9).join(" ")}...
         </p>
         <div className="flex mt-3 items-center justify-between">
           <div>

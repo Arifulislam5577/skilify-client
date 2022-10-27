@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ImCross } from "react-icons/im";
+import { FaBars } from "react-icons/fa";
 import Button from "./Button";
-import {
-  MdOutlineLightMode,
-  MdLightMode,
-  MdOutlineFormatAlignJustify,
-} from "react-icons/md";
+import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,7 +18,11 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <div className="logo">
           <Link to="/" className=" flex items-center ">
-            <img src="favicon.svg" alt="skilify" className="h-8" />
+            <img
+              src="https://res.cloudinary.com/arif5577/image/upload/v1666845414/Skilify/favicon_wzhwsh.svg"
+              alt="skilify"
+              className="h-8"
+            />
             <span className="font-bold tracking-wide text-gray-800 text-sm uppercase">
               Skilify
             </span>
@@ -56,7 +57,7 @@ const Navbar = () => {
           onClick={handleShowMenu}
           className="text-2xl text-gray-500 lg:hidden"
         >
-          <MdOutlineFormatAlignJustify />
+          <FaBars />
         </button>
         {showMobileMenu && (
           <div
