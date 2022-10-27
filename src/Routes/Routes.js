@@ -9,6 +9,7 @@ import Courses from "../pages/Courses";
 import CourseDatails from "../pages/CourseDatails";
 import axios from "axios";
 import PrivateRoute from "./PrivateRoute";
+import CheckOut from "../pages/CheckOut";
 
 const Router = createBrowserRouter([
   {
@@ -26,6 +27,16 @@ const Router = createBrowserRouter([
       {
         path: "/Course/:id",
         element: <CourseDatails />,
+        loader: async ({ params }) =>
+          axios(`http://localhost:5000/api/v1/course/${params.id}`),
+      },
+      {
+        path: "/checkout/:id",
+        element: (
+          <PrivateRoute>
+            <CheckOut />
+          </PrivateRoute>
+        ),
         loader: async ({ params }) =>
           axios(`http://localhost:5000/api/v1/course/${params.id}`),
       },

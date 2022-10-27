@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { DataContext } from "../context/context";
 import useRedirect from "../hooks/useRedirect";
+import { HandleError } from "../utils/HandleError";
 
 const Register = () => {
   const { createUser, updateUser, user, googleSignIn } =
@@ -24,15 +25,21 @@ const Register = () => {
     } else if (fullName.length < 5) {
       setError("FullName must be at least 5 characters");
     } else {
-      setLoading(true);
-      await createUser(email, password);
-      await updateUser(fullName, photoUrl);
-      setFullName("");
-      setPhotoUrl("");
-      setError("");
-      setEmail("");
-      setPassword("");
-      setLoading(false);
+      try {
+        setLoading(true);
+        await createUser(email, password);
+        await updateUser(fullName, photoUrl);
+        setFullName("");
+        setPhotoUrl("");
+        setError("");
+        setEmail("");
+        setPassword("");
+        setLoading(false);
+      } catch (error) {
+        const errorMessage = HandleError(error.message);
+        setError(errorMessage);
+        setLoading(false);
+      }
     }
   };
 

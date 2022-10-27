@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 const CourseDatails = () => {
   const { data } = useLoaderData();
   const {
@@ -10,9 +10,15 @@ const CourseDatails = () => {
     rating,
     instructor,
     coverPhoto,
+    id,
   } = data;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/login?redirect=/checkout/${id}`);
+  };
   return (
-    <section className="">
+    <section>
       <div className="py-10 bg-light text-center">
         <h2 className="text-2xl tracking-wide font-bold text-gray-600 capitalize">
           {title}
@@ -45,7 +51,7 @@ const CourseDatails = () => {
           </div>
         </div>
       </div>
-      <div className="container mt-5">
+      <div className="container mt-5 lg:w-2/3 mx-auto w-full">
         <div className="p-5">
           <img src={coverPhoto} alt={title} />
           <h4 className="text-xl font-bold text-gray-600 mt-5">Description</h4>
@@ -56,12 +62,12 @@ const CourseDatails = () => {
             </p>
           ))}
 
-          <Link
-            to="/checkout"
-            className="py-2 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow hover:translate-y-1 duration-300 transition-all capitalize text-sm my-5 inline-block"
+          <button
+            onClick={handleClick}
+            className="py-3 px-5 bg-secondary text-white  rounded-tl-xl rounded-br-xl shadow hover:translate-y-1 duration-300 transition-all capitalize text-sm my-5 inline-block"
           >
             Get premium access
-          </Link>
+          </button>
         </div>
       </div>
     </section>

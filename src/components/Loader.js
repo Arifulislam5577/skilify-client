@@ -2,9 +2,12 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <section className=" min-h-screen flex items-center justify-center">
+    <section className="flex items-center justify-center">
       <div className="spinner">
-        <img src="images/spinner.svg" alt="spinner" />
+        <img
+          src="https://res.cloudinary.com/arif5577/image/upload/v1666844850/Skilify/spinner_zvhxfh.svg"
+          alt="spinner"
+        />
       </div>
     </section>
   );

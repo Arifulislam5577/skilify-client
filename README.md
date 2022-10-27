@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## SKILIFY CLIENT SIDE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Skilly is a online learning platform. Anyone can learn there favourite topic from our website. It is not free,but we have two premium package for our customers. One is course base and other is monthly package. if you enroll a course you can see only this course,but if anyone subscribe our monthly package he/she can access all the courses. So why are you waiting for? Let's get started.
 
-In the project directory, you can run:
+##### Live Website: https://github.com/ccc
 
-### `npm start`
+##### Used Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router Dom
+- Tailwind CSS
+- Firebase
+- React Icons
+- Axios
+- Node Js
+- ExpressJS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### FEATURE OF THIS APPLICATION
 
-### `npm test`
+- Home page is static page with default content.
+- Courses tab is the main content of our web app.
+- Please click courses and selete your favourite course.
+- If you click course image/title ,it will navigate you the course details page
+- In course details page you can see the course price,rating,total student and instructor.
+- If he/she interest to buy this course,then he/she need to click `get premium access` button.
+- If she/he does not have an account it will say to create a new account.
+- If he/she already have an account then it will say to login.
+- After Login/Register ,he/she can access all the content of the course.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`THANK YOU`
